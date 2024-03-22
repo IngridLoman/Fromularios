@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta charset="utf-8">
+    <meta name="description" content="M">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CINE</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300%7CSonsie+One" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="esty.css">
+  </head>
+  <body>
+    <h1>CINE</h1>
+    <h2>Bienvenid@</h2>
+    <div id="contenido">
+    <div class="contacto">
+        <h2>Formulario de Contacto</h2>
+        <form class="form" action="cine.php" method="POST" novalidate>
+              <fieldset>
+                    <legend>Tus datos</legend>
+
+                    <label for="nombre"> Nombre:
+                    <input type="text" name="nombre" id="nombre" pattern="[A-Za-z]{3}" required
+                    placeholder="Nombre">
+                    </label>
+                    <br>
+                    <br>
+
+                    <label for="apellido"> Apellido:
+                    <input type="text" name="apellido" id="apellido" placeholder="Apellido" required>
+                    </label>
+                    <br>
+                    <br>
+
+                    <radiogroup>
+                        <label for="promociones">Sexo:</label>
+                        <br>
+                        <input type="radio" id="sexo" name="sexo" value="hombre" autofocus checked> Hombre<br>
+                        <input type="radio" id="sexo" name="sexo" value="mujer"> Mujer<br>
+                        <input type="radio" id="sexo" name="sexo" value="otro"> Otro<br>
+                    </radiogroup>
+                    <br>
+
+                    <label for="edad">
+                        Edad:
+                        <input type="number" name="cantidad" min="18" max="99">
+                    </label>
+                    <br> <br>
+
+
+                    <label for="correo"> Tu correo electrónico </label>
+                    <input type="email" name="correo" id="correo" placeholder="tucorreo@dominio.com" >
+                    <br>
+
+                </fieldset>
+
+                <fieldset>
+                    <br><br>
+                    <label for="conocimientos">¿Qué tanto disfrutas del cine?
+                        <input type="range" name="puntaje" min="0" max="10">
+                    </label>
+
+                    <br><br>
+
+                    <label>Escoge tu función
+                        <input list="propuesta" name="encuesta" > 
+                        <select id="formas" onchange="cambiarImagen()">
+                            <option value="kungfu">Kung Fu Panda 4</option>
+                            <option value="joker">The Joker</option>
+                            <option value="dem">El Regreso del Demonio 2</option>
+                            <option value="space">Spaceman de Adam Sandler</option>
+                            <option value="princes">Princesas 3</option>
+                          </select>
+                        </label>
+                      <br>
+                      <br>
+
+                      <label for="tickets">
+                        Boletos:
+                        <input type="number" name="boleto" min="1" max="5">
+                    </label>
+
+                    <label>
+                        Fecha
+                        <input type="date" name="fecha" value=""> <br>
+                        <label>Hora
+                            <input list="propuesta2" name="encuesta2" /></label>
+                          </label>
+                          <datalist id="propuesta2">
+                              <option value="09:15">
+                              <option value="10:30">
+                              <option value="12:45">
+                              <option value="16:20">
+                              <option value="19:10"></option>
+                          </datalist>
+                    </label>
+
+                        <br> <br>
+                    <label>
+                        Elige tus alimentos y bebidas: <br>
+                        <input type="checkbox" value="Palomitas Mantequilla" name="palo">Palomitas Mantequilla <br>
+                        <input type="checkbox" value="Palomitas Caramelo" name="ca">Palomitas Caramelo <br>
+                        <input type="checkbox" value="Palomitas Takis" name="ta">Palomitas Takis <br>
+                        <input type="checkbox" value="Nachos" name="na">Nachos<br>
+                        <input type="checkbox" value="Icee" name="ic">Icee <br>
+                        <input type="checkbox" value="Agua" name="ag">Agua <br>
+                        <input type="checkbox" value="Coca-Cola" name="coca">Coca-Cola <br>
+                        <input type="checkbox" value="Gomitas" name="gomi">Gomitas <br>
+                        <input type="checkbox" value="Chocolates" name="choco">Chocolates <br>
+                    </label>
+      
+                    <br>
+
+                    <label>Los primeros 10 en registrarse obtendran una gorra CINEFILO gratis (elige tu color):
+                        <input type="color" name="gra" value="">
+                    </label>
+      
+                    <br><br>
+
+                    <input type="reset" value="RESETEAR">
+
+                    <input type="submit" value="ENVIAR">
+                        
+              
+                  <legend>Función:</legend>
+              </fieldset>
+      </form>
+  </div>
+  </div>
+  <script>
+    function cambiarImagen() {
+        var formaSeleccionada = document.getElementById("formas").value;
+        document.body.style.backgroundImage = "url('" + formaSeleccionada + ".png')";
+    }
+   </script>
+  </body>
+</html> 

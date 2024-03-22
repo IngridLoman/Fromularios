@@ -1,0 +1,32 @@
+
+h1, h2, h3 {
+    font-family: 'Sonsie One', cursive;
+    color: rgb(160, 68, 247);/*color de titulos*/
+  }
+  h1 {
+    font-size: 4rem;
+    text-align: center;
+    color: paleturquoise;
+    text-shadow: 2px 2px 10px white;
+  }
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('cin.png '); /* Cambia 'cuadrado.png' por la ruta de tu imagen */
+            background-size: cover;
+           /* object-fit: cover;*/
+            background-position: cover;
+            font-family: 'Open Sans Condensed', sans-serif; /* Cambia la fuente según tus preferencias */
+            color:rgb(128, 38, 212); /* Cambia el color del texto si es necesario */
+        }
+    
+        #contenido {
+            padding: 20px;
+           
+           
+        }
+    
+        #formas {
+            margin-bottom: 10px;
+            
+        }
